@@ -57,3 +57,7 @@ body {
     border: none;
     cursor: pointer;
 }
+
+#result {
+    color: #ffffff;
+}
