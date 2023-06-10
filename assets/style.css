@@ -8,13 +8,18 @@
 body{
     background: #222222;
 }
-.container{
-    width: 100vh;
-    height: 100vh;
+.container1 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient(rgba(0,8,51,0.9),rgba(0,8,51,0.9)), url(movie1.jpg);
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 form{
     background: #fff;
     width: 600px;
