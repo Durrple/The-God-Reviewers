@@ -31,7 +31,8 @@ body {
 .search-container {
     display: grid;
     grid-template-columns: 9fr 3fr;
-    gap: 1.2em;
+    gap: 0.6em;
+    
 }
 
 .search-container input,
@@ -42,15 +43,15 @@ body {
 }
 
 .search-container input {
-    background-color: transparent;
-    border: 1px solid #a0a0a0;
-    padding: 0.7rem;
-    color: #ffffff;
+    flex: 1;
+    height: 50px;
+    background: white;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    color: black;
 }
 
-.search-container input:focus {
-    border-color: #ffffff;
-}
 
 .search-container button {
     background-color: #110770;
