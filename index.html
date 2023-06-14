@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<body>
+<body class="main">
   
-  <div class="container1">
-    <div>
-      <form id="search">
-        <input type="text" placeholder="What movie are you looking for?">
-        <button type="submit">Search</button>
-      </form>
+  <div class="search-box">
+    <div class="row">
+        <input type="text" id="input-box" placeholder="What movie are you looking for?" autocomplete="off">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
+      <div class="result-page"></div>
   </div>
 
   <script src="./assets/key.js"></script>
   <script src="./assets/homepage.js"></script>
+  <script src="https://kit.fontawesome.com/75e8658d4d.js" crossorigin="anonymous"></script>
 </body>
 </html>

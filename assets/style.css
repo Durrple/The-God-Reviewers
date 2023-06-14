@@ -5,10 +5,7 @@
     box-sizing: border-box;
 }
 
-body{
-    background: #222222;
-}
-.container1 {
+.main{
     width: 100%;
     min-height: 100vh;
     padding: 5%;
@@ -20,21 +17,35 @@ body{
     justify-content: center;
 }
 
-form{
+.search-box {
+    width: 900px;
     background: #fff;
-    width: 600px;
-    height: 55px;
+    margin: 200px auto 0;
+    border-radius: 5px;
+}
+.row{
     display: flex;
+    align-items: center;
+    padding: 10px 20px;
 }
-form input{
+input{
     flex: 1;
-    border: none;
-    outline: none;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    color: black;
 }
-form button{
-    background: #110770;
-    padding: 10px 50px;
-    border: none;
-    outline: none;
-    color:#fff
+button{
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+button .fa-solid{
+    width: 25px;
+    color: #555;
+    font-size: 22px;
+    cursor: pointer;
+    align-items: end;
 }
