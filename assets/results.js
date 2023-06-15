@@ -4,13 +4,23 @@ var movieNameRef = document.getElementById
 var searchBtn = document.getElementById("search-btn");
 var result = document.getElementById("result");
 
+// Added localstorage for recent searches
+function saveSearch(movieSearch) {
+    var movieSearches = JSON.parse(localStorage.getItem("recent-searches")) || []; 
+    movieSearches.push(movieSearch);
+    localStorage.setItem("recent-searches" , JSON.stringify(movieSearches));
+}
+
 //Fetching data from API
 var getMovie = () => {
     var movieName = movieNameRef.value;
     var url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
+    saveSearch(movieName)
+
     //If input field IS empty
     if (movieName.length <= 0) {
       result.innerHTML = `<h3 class="msg">Please Input A Movie Name</h3>`;
+      
     }
     //If input field is NOT empty
     else {
@@ -58,4 +68,5 @@ var getMovie = () => {
 };
 
 searchBtn.addEventListener("click", getMovie);
+
 window.addEventListener("load", getMovie);
