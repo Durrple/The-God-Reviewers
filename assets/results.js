@@ -17,6 +17,9 @@ var getMovie = () => {
     var url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
     saveSearch(movieName)
 
+const apiurl = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${movieName}&country=us`; 
+const options = { method: 'GET', headers: { 'X-RapidAPI-Key': '2929fb0e29msh7a0e7184841ef55p15b783jsn5770558d0b34', 'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com' } }
+    
     //If input field IS empty
     if (movieName.length <= 0) {
       result.innerHTML = `<h3 class="msg">Please Input A Movie Name</h3>`;
@@ -52,8 +55,15 @@ var getMovie = () => {
                 <p>${data.Plot}</p>
                 <h3>Cast:</h3>
                 <p>${data.Actors}</p>
-                
+                <button type="button" id="Trailer"></button>
             `;
+
+            fetch(apiurl, options)
+            .then((response1) => response1.json())
+            .then((trailerdata) => {
+              document.getElementById('Trailer').innerHTML=` <button type="button" id="Trailer"><a href="${trailerdata.result[0].youtubeTrailerVideoLink}">Trailer</a></button> `;
+            })
+
             }
             //If movie does NOT exist in Database
             else{
