@@ -14,7 +14,7 @@ function saveSearch(movieSearch) {
 //Fetching data from API
 var getMovie = () => {
     var movieName = movieNameRef.value;
-    var url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
+    var url = `https://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
     saveSearch(movieName)
 
 const apiurl = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${movieName}&country=us`; 
@@ -65,6 +65,9 @@ const options = { method: 'GET', headers: { 'X-RapidAPI-Key': '2929fb0e29msh7a0e
                 <p>${data.Country}</p>
                 <h3>Awards:</h3>
                 <p>${data.Awards}</p>
+                <h3>Box Office:</h3>
+                <p>${data.BoxOffice}</p>
+            
 
                 <button type="button" id="Trailer"></button>
             `;
