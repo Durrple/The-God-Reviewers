@@ -55,6 +55,17 @@ const options = { method: 'GET', headers: { 'X-RapidAPI-Key': '2929fb0e29msh7a0e
                 <p>${data.Plot}</p>
                 <h3>Cast:</h3>
                 <p>${data.Actors}</p>
+                <h3>Director(s):</h3>
+                <p>${data.Director}</p>
+                <h3>Writer(s):</h3>
+                <p>${data.Writer}</p>
+                <h3>Language(s):</h3>
+                <p>${data.Language}</p>
+                <h3>Country:</h3>
+                <p>${data.Country}</p>
+                <h3>Awards:</h3>
+                <p>${data.Awards}</p>
+
                 <button type="button" id="Trailer"></button>
             `;
 
