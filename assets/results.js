@@ -68,7 +68,7 @@ const options = { method: 'GET', headers: { 'X-RapidAPI-Key': '2929fb0e29msh7a0e
                 <h3>Box Office:</h3>
                 <p>${data.BoxOffice}</p>
             
-
+                <h3>Trailer:</h3>
                 <button type="button" id="Trailer"></button>
             `;
 
